@@ -3,9 +3,6 @@
 *Same village. Same people. A completely different game for you.*
 
 > **Hollowmere** is a working title. Rename it freely.
-
----
-
 ## 1. The idea in one minute
 
 Hollowmere is a retro 2D pixel survival RPG set in a small, struggling village at the edge of a harsh wilderness. You gather, craft, build, hunt and fight to survive, like in the classic pixel survival games. What is different is the storyteller.
@@ -18,7 +15,7 @@ Two friends can finish the game, sit down together and find that they disagree a
 
 That conversation is the product.
 
----
+
 
 ## 2. What kind of game is it?
 
@@ -27,8 +24,6 @@ That conversation is the product.
 - **Session:** a full run takes a few hours, split into in-game days. Each day is a short, self-contained chunk of play, so it works in short sessions too
 - **Play style:** exploration, resource gathering, crafting, light base-building, real-time melee and ranged combat, conversations, and difficult choices
 - **Platform feel:** easy to pick up on a phone, comfortable on a computer
-
----
 
 ## 3. The promise to the player
 
@@ -337,5 +332,6 @@ Endings come in families, and each family has many variations depending on who s
 **What if I want to see everything?** You cannot, in one run. That is the point. Your Chronicle will tell you what you missed.
 
 **Can I play offline?** The game always has a fallback storyteller that keeps it playable, so the experience degrades gracefully instead of breaking.
-#   H o l l o w m e r e  
+#   H o l l o w m e r e 
+ 
  
