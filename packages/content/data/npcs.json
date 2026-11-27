@@ -1,0 +1,163 @@
+{
+  "maren": {
+    "id": "maren",
+    "name": "Maren",
+    "title": "The blacksmith",
+    "personality": "Blunt, proud and fiercely loyal once trust is earned. Judges people by how they work. Hides a soft heart behind a hard face.",
+    "speechStyle": "Short, clipped statements. Forge metaphors. Rarely asks questions; tells you what she thinks.",
+    "tics": [
+      "taps her hammer against her palm when thinking",
+      "says 'Hold the line.' when she approves of something",
+      "never says sorry; says 'I'll mend it.'"
+    ],
+    "allowedRoles": [
+      "friend",
+      "rival",
+      "smuggler",
+      "protector"
+    ],
+    "home": "home_maren",
+    "work": "forge",
+    "gather": "meeting_hall"
+  },
+  "tobin": {
+    "id": "tobin",
+    "name": "Tobin",
+    "title": "The miller",
+    "personality": "Gentle, forgetful and kind, weighed down by something he will not name. Loves the village more than he trusts it.",
+    "speechStyle": "Slow and rambling. Trails off mid-thought. Calls everyone 'lad' or 'lass'.",
+    "tics": [
+      "hums the old mill song",
+      "loses his thread and starts again",
+      "glances at the mill wheel when he is not telling the whole truth"
+    ],
+    "allowedRoles": [
+      "victim",
+      "liar",
+      "keeper"
+    ],
+    "home": "home_tobin",
+    "work": "mill",
+    "gather": "well"
+  },
+  "edda": {
+    "id": "edda",
+    "name": "Sister Edda",
+    "title": "The healer at the chapel",
+    "personality": "Calm, warm and precise. Everyone's confidant. Carries a weight she does not set down.",
+    "speechStyle": "Soft, measured, gently imperative. Blessing-like phrases. Answers a question with a quieter question.",
+    "tics": [
+      "folds her hands before delivering bad news",
+      "tells nervous people to 'be easy'",
+      "counts her prayer beads when someone lies near her"
+    ],
+    "allowedRoles": [
+      "saint",
+      "cult_leader",
+      "griever"
+    ],
+    "home": "home_edda",
+    "work": "chapel",
+    "gather": "chapel"
+  },
+  "voss": {
+    "id": "voss",
+    "name": "Captain Voss",
+    "title": "Captain of the village guard",
+    "personality": "Rigid, dutiful and proud. Terrified of being found wanting, so he over-commands.",
+    "speechStyle": "Formal and clipped like orders. Calls people 'citizen'. Cites rules by number.",
+    "tics": [
+      "straightens his belt before speaking",
+      "scans the treeline mid-conversation",
+      "answers a plea with 'Noted.'"
+    ],
+    "allowedRoles": [
+      "hero",
+      "coward",
+      "tyrant"
+    ],
+    "home": "home_voss",
+    "work": "watchtower",
+    "gather": "meeting_hall"
+  },
+  "pip": {
+    "id": "pip",
+    "name": "Pip",
+    "title": "A sharp-eyed orphan",
+    "personality": "Quick, cheeky and watchful. Sees more than anyone admits. Trusts slowly and tests people.",
+    "speechStyle": "Fast and blunt. Answers questions with questions. Points out small odd details nobody else mentions.",
+    "tics": [
+      "counts things out loud",
+      "perches somewhere high to watch",
+      "pockets small objects without noticing"
+    ],
+    "allowedRoles": [
+      "truth_seer",
+      "thief",
+      "hope"
+    ],
+    "home": "home_pip",
+    "work": "village_gate",
+    "gather": "well"
+  },
+  "wren": {
+    "id": "wren",
+    "name": "Wren",
+    "title": "A hunter at the forest edge",
+    "personality": "Quiet, wary and self-reliant. Reads weather and people the same way. Keeps one foot out the door.",
+    "speechStyle": "Sparse and low. Says half of what others would. Uses nature images. Avoids using names.",
+    "tics": [
+      "checks the wind with a wet finger",
+      "whittles while listening",
+      "stands near the nearest exit"
+    ],
+    "allowedRoles": [
+      "guide",
+      "spy",
+      "leaver"
+    ],
+    "home": "home_wren",
+    "work": "forest_edge",
+    "gather": "forest_edge"
+  },
+  "alder": {
+    "id": "alder",
+    "name": "Mayor Alder",
+    "title": "The mayor",
+    "personality": "Tired, polished and diplomatic. Hedges everything. Wants to be thought well of more than he wants to be right.",
+    "speechStyle": "Long, careful sentences. Says 'we' when he means 'you'. Hedges: 'I would not say that, exactly.'",
+    "tics": [
+      "polishes his spectacles when pressed",
+      "sighs before every decision",
+      "touches the mayoral chain when lying or when afraid"
+    ],
+    "allowedRoles": [
+      "weary_leader",
+      "hoarder",
+      "traitor"
+    ],
+    "home": "home_alder",
+    "work": "meeting_hall",
+    "gather": "meeting_hall"
+  },
+  "bram": {
+    "id": "bram",
+    "name": "Bram",
+    "title": "The traveling peddler",
+    "personality": "Charming, talkative and generous with flattery. Everything is a deal. Hard to pin down.",
+    "speechStyle": "Salesman patter with flourishes. Gives customers nicknames. Turns every topic into an offer.",
+    "tics": [
+      "jingles his coin pouch",
+      "pats his satchel when a question gets close",
+      "winks after a big claim"
+    ],
+    "allowedRoles": [
+      "ally_trader",
+      "swindler",
+      "impostor"
+    ],
+    "home": "village_gate",
+    "work": "village_gate",
+    "gather": "well"
+  }
+}

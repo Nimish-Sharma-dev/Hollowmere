@@ -1,0 +1,20 @@
+{
+  "name": "hollowmere",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"packages/**/test/**/*.test.ts\"",
+    "sim": "node packages/engine/scripts/sim.ts",
+    "verify": "npm run typecheck && npm run test",
+    "content:lint": "node packages/content/scripts/lint.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
