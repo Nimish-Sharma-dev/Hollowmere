@@ -1,0 +1,43 @@
+{
+  "campfire": {
+    "id": "campfire",
+    "name": "Campfire",
+    "cost": [
+      {
+        "item": "wood",
+        "qty": 5
+      },
+      {
+        "item": "stone",
+        "qty": 2
+      }
+    ],
+    "provides": "fire"
+  },
+  "shelter": {
+    "id": "shelter",
+    "name": "Shelter",
+    "cost": [
+      {
+        "item": "wood",
+        "qty": 20
+      }
+    ],
+    "provides": "shelter"
+  },
+  "workshop": {
+    "id": "workshop",
+    "name": "Workshop",
+    "cost": [
+      {
+        "item": "wood",
+        "qty": 10
+      },
+      {
+        "item": "stone",
+        "qty": 6
+      }
+    ],
+    "provides": "workshop"
+  }
+}
