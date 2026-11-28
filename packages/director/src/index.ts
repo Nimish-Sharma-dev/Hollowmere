@@ -13,5 +13,6 @@ export * from './director.ts';
 export * from './sanitize.ts';
 export * from './dialogue.ts';
 export * from './memory.ts';
+export * from './dilemmas.ts';
 export * from './proxy.ts';
 export * from './runtime.ts';

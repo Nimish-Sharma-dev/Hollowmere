@@ -36,7 +36,7 @@ export const newDirectorMemory = (): DirectorMemory => ({ beats: [], stanceCount
 export const STANCE_TARGET: Record<Stance, number> = { mirror: 0.4, challenge: 0.4, wildcard: 0.2 };
 /** after this many decisions the quota is enforced */
 export const QUOTA_MIN_DECISIONS = 8;
-export const QUOTA_TOLERANCE = 0.25;
+export const QUOTA_TOLERANCE = 0.10;
 
 export interface DirectorOutput {
   diagnosis: string;
@@ -67,7 +67,7 @@ export interface DirectorInput {
   behaviourTags?: string[];
 }
 
-const CHALLENGE_TAGS = ['conflict', 'crime', 'secret'];
+const CHALLENGE_TAGS = ['conflict', 'crime', 'secret', 'escalation', 'confrontation'];
 const MIRROR_TAGS = ['kindness', 'relief'];
 const LIFELINE_TAGS = ['relief', 'kindness'];
 const isCrisisTag = (t: string): boolean => t.startsWith('crisis_');
@@ -159,7 +159,11 @@ export function fallbackDirector(input: DirectorInput): DirectorOutput | null {
       const l = pool.filter((e) => e.tags.some((t) => LIFELINE_TAGS.includes(t)));
       if (l.length) c = l;
     }
-    if (c.length === 0) return null;
+    if (c.length === 0) {
+      const fromEligible = eligible.filter((e) => classify(e.tags, behaviour) === stance && memory.beats[memory.beats.length - 1]?.event_id !== e.id);
+      if (fromEligible.length) c = fromEligible;
+      else return null;
+    }
     return rng.weighted(c.map((e) => ({ item: e, weight: score(e) })));
   };
   // honour the quota, then fall back through the other stances

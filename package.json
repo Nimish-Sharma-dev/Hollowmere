@@ -18,6 +18,7 @@
     "cost": "node packages/director/scripts/cost.ts",
     "dialogue:eval": "node packages/director/scripts/dialogue-eval.ts",
     "rumor:sim": "node packages/director/scripts/rumor-sim.ts",
+    "stance:sim": "node packages/director/scripts/stance-sim.ts",
     "llm:smoke": "node packages/director/scripts/llm-smoke.ts",
     "edge:smoke": "node packages/director/scripts/edge-smoke.ts",
     "bibles": "node packages/director/scripts/bibles.ts"
