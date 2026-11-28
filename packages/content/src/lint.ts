@@ -78,6 +78,8 @@ export function lintContent(c: ContentBundle): Issue[] {
     if (!n.personality || n.personality.length < 40) err(`npc ${n.id}`, 'personality missing or too short (min 40 chars)');
     if (!n.speechStyle || n.speechStyle.length < 30) err(`npc ${n.id}`, 'speechStyle missing or too short (min 30 chars)');
     if (!n.tics || n.tics.length < 3) err(`npc ${n.id}`, 'needs at least 3 tics');
+    if (!n.arrival || n.arrival.length < 30 || n.arrival.length > 200) err(`npc ${n.id}`, 'arrival line missing or not 30 to 200 characters');
+    else if (!n.arrival.includes(n.name.split(' ').pop()!)) err(`npc ${n.id}`, 'arrival line should name the NPC');
     if (n.tics && new Set(n.tics).size !== n.tics.length) err(`npc ${n.id}`, 'duplicate tics');
   }
   if (Object.keys(c.npcs).length === 0) err('npcs', 'no NPCs defined');
@@ -165,15 +167,17 @@ export function coverage(c: ContentBundle): Coverage {
 }
 
 export function formatCoverage(cov: Coverage): string {
-  const lines = ['EVENT COVERAGE', 'event'.padEnd(20) + 'slots (candidates)'.padEnd(40) + 'possible assignments'];
-  for (const e of cov.events) {
-    const slots = e.slots.length ? e.slots.map((s) => `${s.slot}:${s.candidates}`).join(' ') : '(no slots)';
-    lines.push(e.id.padEnd(20) + slots.padEnd(40) + e.assignments);
-  }
+  const w1 = Math.max(12, ...cov.events.map((e) => e.id.length)) + 2;
+  const slotText = (e: EventCoverage): string => (e.slots.length ? e.slots.map((s) => `${s.slot}:${s.candidates}`).join(' ') : '(no slots)');
+  const w2 = Math.max(20, ...cov.events.map((e) => slotText(e).length)) + 2;
+  const lines = ['EVENT COVERAGE', 'event'.padEnd(w1) + 'slots (candidates)'.padEnd(w2) + 'possible assignments'];
+  for (const e of cov.events) lines.push(e.id.padEnd(w1) + slotText(e).padEnd(w2) + e.assignments);
   lines.push('', 'NPC INVOLVEMENT', 'npc'.padEnd(14) + 'roles'.padEnd(8) + 'events they can appear in');
   for (const [id, v] of Object.entries(cov.npcs)) lines.push(id.padEnd(14) + String(v.roles).padEnd(8) + v.events);
-  lines.push('', 'EVENTS PER TAG', ...Object.entries(cov.tags).sort().map(([t, ids]) => `${t.padEnd(14)}${ids.length}  (${ids.join(', ')})`));
-  lines.push('', 'EVENTS PER ROLE (a role that appears in a slot)', ...Object.entries(cov.roles).sort().map(([r, ids]) => `${r.padEnd(14)}${ids.length}`));
+  const wt = Math.max(14, ...Object.keys(cov.tags).map((t) => t.length)) + 2;
+  lines.push('', 'EVENTS PER TAG', ...Object.entries(cov.tags).sort().map(([t, ids]) => `${t.padEnd(wt)}${String(ids.length).padEnd(4)}(${ids.join(', ')})`));
+  const wr = Math.max(14, ...Object.keys(cov.roles).map((r) => r.length)) + 2;
+  lines.push('', 'EVENTS PER ROLE (a role that appears in a slot)', ...Object.entries(cov.roles).sort().map(([r, ids]) => `${r.padEnd(wr)}${ids.length}`));
   lines.push('', `Total card-level assignments across events: ${cov.totalAssignments}`);
   return lines.join('\n');
 }

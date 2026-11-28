@@ -10,6 +10,7 @@
       "says 'Hold the line.' when she approves of something",
       "never says sorry; says 'I'll mend it.'"
     ],
+    "arrival": "Maren looks up from the forge, hammer still in hand, and gives you a long, measuring look.",
     "allowedRoles": [
       "friend",
       "rival",
@@ -31,6 +32,7 @@
       "loses his thread and starts again",
       "glances at the mill wheel when he is not telling the whole truth"
     ],
+    "arrival": "Old Tobin brushes flour from his sleeve, starts to greet you, loses the thought, and smiles anyway.",
     "allowedRoles": [
       "victim",
       "liar",
@@ -51,6 +53,7 @@
       "tells nervous people to 'be easy'",
       "counts her prayer beads when someone lies near her"
     ],
+    "arrival": "Sister Edda is lighting candles by the chapel door and nods you inside without a word.",
     "allowedRoles": [
       "saint",
       "cult_leader",
@@ -71,6 +74,7 @@
       "scans the treeline mid-conversation",
       "answers a plea with 'Noted.'"
     ],
+    "arrival": "Captain Voss stops mid-patrol, one hand on his belt, and looks you over for a long moment.",
     "allowedRoles": [
       "hero",
       "coward",
@@ -91,6 +95,7 @@
       "perches somewhere high to watch",
       "pockets small objects without noticing"
     ],
+    "arrival": "Pip, a small figure on the wall by the well, drops down beside you and is already counting what you carry.",
     "allowedRoles": [
       "truth_seer",
       "thief",
@@ -111,6 +116,7 @@
       "whittles while listening",
       "stands near the nearest exit"
     ],
+    "arrival": "Wren stands at the forest edge whittling a stick, and says nothing as you pass.",
     "allowedRoles": [
       "guide",
       "spy",
@@ -131,6 +137,7 @@
       "sighs before every decision",
       "touches the mayoral chain when lying or when afraid"
     ],
+    "arrival": "Mayor Alder hurries over, polishing his spectacles, with a welcome that comes a little too smoothly.",
     "allowedRoles": [
       "weary_leader",
       "hoarder",
@@ -151,6 +158,7 @@
       "pats his satchel when a question gets close",
       "winks after a big claim"
     ],
+    "arrival": "Bram the peddler spreads his arms wide, coin pouch jingling, as though he had been waiting for you all week.",
     "allowedRoles": [
       "ally_trader",
       "swindler",

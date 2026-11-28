@@ -39,12 +39,14 @@ test('the 8-NPC starter cast matches the README and has full flavour', () => {
   assert.deepEqual(roles('bram'), ['ally_trader', 'impostor', 'swindler']);
   assert.deepEqual(roles('maren'), ['friend', 'protector', 'rival', 'smuggler']);
   for (const n of Object.values(c.npcs)) {
-    assert.ok(n.title && n.personality && n.speechStyle && n.tics!.length >= 3, n.id);
+    assert.ok(n.title && n.personality && n.speechStyle && n.tics!.length >= 3 && n.arrival, n.id);
+    assert.ok(n.arrival!.includes(n.name.split(' ').pop()!), `${n.id}: arrival names the NPC`);
     assert.ok(!/[\u2013\u2014]/.test(`${n.personality}${n.speechStyle}${n.tics!.join('')}`), `${n.id}: no dashes in prose`);
   }
   // the six cast voices should be distinguishable: no two share a tic or a speech style
   const styles = new Set(Object.values(c.npcs).map((n) => n.speechStyle));
   assert.equal(styles.size, 8);
+  assert.equal(new Set(Object.values(c.npcs).map((n) => n.arrival)).size, 8);
   assert.equal(new Set(Object.values(c.npcs).flatMap((n) => n.tics!)).size, 24);
 });
 
@@ -91,8 +93,9 @@ test('NPC cards are linted for roles, flavour and tics', () => {
   c.npcs['tobin']!.personality = 'meh';
   c.npcs['edda']!.tics = ['one', 'one', 'two'];
   c.npcs['voss']!.title = '';
+  c.npcs['bram']!.arrival = 'short';
   const e = errors(c).join('\n');
-  for (const needle of ['npc maren: needs at least 3 allowed roles', 'npc maren: duplicate allowed role', 'npc tobin: personality missing or too short', 'npc edda: duplicate tics', 'npc voss: missing title']) assert.ok(e.includes(needle), needle);
+  for (const needle of ['npc maren: needs at least 3 allowed roles', 'npc maren: duplicate allowed role', 'npc tobin: personality missing or too short', 'npc edda: duplicate tics', 'npc voss: missing title', 'npc bram: arrival line missing']) assert.ok(e.includes(needle), needle);
 });
 
 test('events must have effects; unreachable, requirement-free events are warned about', () => {

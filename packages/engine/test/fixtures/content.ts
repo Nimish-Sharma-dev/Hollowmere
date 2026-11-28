@@ -67,7 +67,7 @@ export function makeContent(): ContentBundle {
     events: {
       midnight_theft: {
         id: 'midnight_theft',
-        tags: ['crime'],
+        tags: ['crime', 'crisis_hoarded_stores', 'crisis_winter_raiders', 'escalation', 'confrontation'],
         slots: { thief: { roles: ['thief', 'swindler', 'hoarder'] }, victim: { roles: ['victim', 'friend', 'weary_leader', 'keeper'] } },
         beats: ['{thief} was seen near {victim}\'s door after dark.', '{victim} says something is missing.'],
         effects: ['village.fear +1', 'npc[thief].trust -2', 'npc[victim].trust +1', 'flag.set theft_reported', 'plant clue stolen_coin'],
@@ -75,7 +75,7 @@ export function makeContent(): ContentBundle {
       },
       hoard_found: {
         id: 'hoard_found',
-        tags: ['secret'],
+        tags: ['secret', 'crisis_hoarded_stores', 'crisis_poisoned_well', 'escalation', 'confrontation'],
         requirements: { minDay: 2, flagsNone: ['hoard_found'] },
         slots: { hoarder: { roles: ['hoarder', 'traitor', 'swindler'] } },
         beats: ['Sacks of grain are found in {hoarder}\'s cellar.'],
@@ -83,7 +83,7 @@ export function makeContent(): ContentBundle {
       },
       bread_gift: {
         id: 'bread_gift',
-        tags: ['kindness'],
+        tags: ['kindness', 'crisis_poisoned_well', 'crisis_chapel_cult', 'crisis_hoarded_stores', 'crisis_winter_raiders', 'setup'],
         slots: { giver: { roles: ['friend', 'saint', 'protector', 'hero'] } },
         beats: ['{giver} leaves a warm loaf on your doorstep.'],
         effects: ['village.hope +1', 'npc[giver].trust +2', 'give item bread 2'],
@@ -91,7 +91,7 @@ export function makeContent(): ContentBundle {
       },
       night_watch: {
         id: 'night_watch',
-        tags: ['night'],
+        tags: ['night', 'crisis_winter_raiders', 'crisis_chapel_cult', 'escalation'],
         requirements: { phase: ['night'] },
         slots: { guard: { roles: ['hero', 'coward', 'tyrant', 'weary_leader', 'protector'] } },
         beats: ['{guard} doubles the watch tonight.'],
@@ -99,7 +99,7 @@ export function makeContent(): ContentBundle {
       },
       rival_challenge: {
         id: 'rival_challenge',
-        tags: ['conflict'],
+        tags: ['conflict', 'crisis_hoarded_stores', 'crisis_winter_raiders', 'crisis_chapel_cult', 'confrontation'],
         requirements: { minDay: 2 },
         slots: { challenger: { roles: ['rival', 'tyrant', 'coward'] }, witness: { roles: ['friend', 'truth_seer', 'hope', 'protector'] } },
         beats: ['{challenger} confronts you in the square while {witness} watches.'],
@@ -108,7 +108,7 @@ export function makeContent(): ContentBundle {
       },
       false_prophet: {
         id: 'false_prophet',
-        tags: ['belief'],
+        tags: ['belief', 'crisis_chapel_cult', 'crisis_poisoned_well', 'escalation'],
         requirements: { minDay: 3 },
         slots: { preacher: { roles: ['cult_leader', 'saint', 'griever', 'hero'] }, follower: { roles: ['hope', 'victim', 'liar'] } },
         beats: ['{preacher} speaks of salvation, and {follower} kneels to listen.'],
@@ -117,7 +117,7 @@ export function makeContent(): ContentBundle {
       },
       bad_bargain: {
         id: 'bad_bargain',
-        tags: ['trade'],
+        tags: ['trade', 'crisis_hoarded_stores', 'crisis_poisoned_well', 'crisis_winter_raiders', 'setup'],
         requirements: { minDay: 2 },
         slots: { dealer: { roles: ['ally_trader', 'swindler', 'impostor', 'smuggler'] }, customer: { roles: ['friend', 'hope', 'victim', 'keeper'] } },
         beats: ['{dealer} presses a bargain on {customer}, too quickly.'],
@@ -126,7 +126,7 @@ export function makeContent(): ContentBundle {
       },
       contradicting_story: {
         id: 'contradicting_story',
-        tags: ['mystery'],
+        tags: ['mystery', 'crisis_poisoned_well', 'crisis_chapel_cult', 'crisis_hoarded_stores', 'crisis_winter_raiders', 'escalation'],
         requirements: { minDay: 2 },
         slots: { speaker: { roles: ['liar', 'traitor', 'impostor'] }, listener: { roles: ['truth_seer', 'keeper', 'weary_leader'] } },
         beats: ['{speaker} tells {listener} a story that does not match yesterday\'s.'],
@@ -135,7 +135,7 @@ export function makeContent(): ContentBundle {
       },
       stranger_at_the_gate: {
         id: 'stranger_at_the_gate',
-        tags: ['mystery'],
+        tags: ['mystery', 'crisis_winter_raiders', 'crisis_poisoned_well', 'crisis_chapel_cult', 'setup'],
         slots: { watcher: { roles: ['spy', 'guide', 'leaver', 'truth_seer'] }, intruder: { roles: ['impostor', 'swindler', 'smuggler', 'thief'] } },
         beats: ['{watcher} notices {intruder} near the gate after dark.', '{intruder} claims to be passing through.'],
         effects: ['village.fear +0.5', 'npc[watcher].trust +1', 'plant clue gate_stranger'],
@@ -146,10 +146,11 @@ export function makeContent(): ContentBundle {
       famine: { id: 'famine', tags: ['threshold'], slots: {}, beats: ['The grain store is empty.'], effects: ['village.fear +1', 'village.hope -1', 'flag.set famine_seen', 'schedule event soup_kitchen in 1'], cooldownDays: 6 },
       soup_kitchen: {
         id: 'soup_kitchen',
-        tags: ['relief'],
+        tags: ['relief', 'crisis_poisoned_well', 'crisis_chapel_cult', 'crisis_hoarded_stores', 'crisis_winter_raiders', 'setup'],
         slots: { cook: { roles: ['saint', 'friend', 'protector', 'griever', 'hero'] } },
         beats: ['{cook} opens a soup kitchen in the hall.'],
         effects: ['village.hunger -1.5', 'village.hope +0.5', 'npc[cook].trust +1', 'spawn npc[cook] at meeting_hall'],
+        cooldownDays: 2,
       },
       gift_day: { id: 'gift_day', tags: ['threshold'], slots: {}, beats: ['Neighbours bring you small gifts.'], effects: ['village.hope +0.5', 'give item bread 1'], cooldownDays: 5 },
       factions_split: { id: 'factions_split', tags: ['threshold'], slots: {}, beats: ['The village splits into two camps.'], effects: ['village.fear +1', 'flag.set village_split'], cooldownDays: 5 },

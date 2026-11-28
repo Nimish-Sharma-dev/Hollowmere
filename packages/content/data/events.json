@@ -2,7 +2,11 @@
   "midnight_theft": {
     "id": "midnight_theft",
     "tags": [
-      "crime"
+      "crime",
+      "crisis_hoarded_stores",
+      "crisis_winter_raiders",
+      "escalation",
+      "confrontation"
     ],
     "slots": {
       "thief": {
@@ -37,7 +41,11 @@
   "hoard_found": {
     "id": "hoard_found",
     "tags": [
-      "secret"
+      "secret",
+      "crisis_hoarded_stores",
+      "crisis_poisoned_well",
+      "escalation",
+      "confrontation"
     ],
     "requirements": {
       "minDay": 2,
@@ -67,7 +75,12 @@
   "bread_gift": {
     "id": "bread_gift",
     "tags": [
-      "kindness"
+      "kindness",
+      "crisis_poisoned_well",
+      "crisis_chapel_cult",
+      "crisis_hoarded_stores",
+      "crisis_winter_raiders",
+      "setup"
     ],
     "slots": {
       "giver": {
@@ -92,7 +105,10 @@
   "night_watch": {
     "id": "night_watch",
     "tags": [
-      "night"
+      "night",
+      "crisis_winter_raiders",
+      "crisis_chapel_cult",
+      "escalation"
     ],
     "requirements": {
       "phase": [
@@ -120,7 +136,11 @@
   "rival_challenge": {
     "id": "rival_challenge",
     "tags": [
-      "conflict"
+      "conflict",
+      "crisis_hoarded_stores",
+      "crisis_winter_raiders",
+      "crisis_chapel_cult",
+      "confrontation"
     ],
     "requirements": {
       "minDay": 2
@@ -155,7 +175,10 @@
   "false_prophet": {
     "id": "false_prophet",
     "tags": [
-      "belief"
+      "belief",
+      "crisis_chapel_cult",
+      "crisis_poisoned_well",
+      "escalation"
     ],
     "requirements": {
       "minDay": 3
@@ -190,7 +213,11 @@
   "bad_bargain": {
     "id": "bad_bargain",
     "tags": [
-      "trade"
+      "trade",
+      "crisis_hoarded_stores",
+      "crisis_poisoned_well",
+      "crisis_winter_raiders",
+      "setup"
     ],
     "requirements": {
       "minDay": 2
@@ -226,7 +253,12 @@
   "contradicting_story": {
     "id": "contradicting_story",
     "tags": [
-      "mystery"
+      "mystery",
+      "crisis_poisoned_well",
+      "crisis_chapel_cult",
+      "crisis_hoarded_stores",
+      "crisis_winter_raiders",
+      "escalation"
     ],
     "requirements": {
       "minDay": 2
@@ -259,7 +291,11 @@
   "stranger_at_the_gate": {
     "id": "stranger_at_the_gate",
     "tags": [
-      "mystery"
+      "mystery",
+      "crisis_winter_raiders",
+      "crisis_poisoned_well",
+      "crisis_chapel_cult",
+      "setup"
     ],
     "slots": {
       "watcher": {
@@ -340,7 +376,12 @@
   "soup_kitchen": {
     "id": "soup_kitchen",
     "tags": [
-      "relief"
+      "relief",
+      "crisis_poisoned_well",
+      "crisis_chapel_cult",
+      "crisis_hoarded_stores",
+      "crisis_winter_raiders",
+      "setup"
     ],
     "slots": {
       "cook": {
@@ -361,7 +402,8 @@
       "village.hope +0.5",
       "npc[cook].trust +1",
       "spawn npc[cook] at meeting_hall"
-    ]
+    ],
+    "cooldownDays": 2
   },
   "gift_day": {
     "id": "gift_day",

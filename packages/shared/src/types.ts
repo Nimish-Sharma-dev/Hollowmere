@@ -126,6 +126,8 @@ export interface NpcCard {
   speechStyle?: string;
   /** small repeated behaviours that make a character recognisable (3 or more) */
   tics?: string[];
+  /** one sentence shown when this NPC is the first person the player meets (a real sentence, not a tic) */
+  arrival?: string;
   allowedRoles: string[];
   home: Id;
   work: Id;
