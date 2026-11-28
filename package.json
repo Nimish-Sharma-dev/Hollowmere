@@ -20,6 +20,7 @@
     "rumor:sim": "node packages/director/scripts/rumor-sim.ts",
     "stance:sim": "node packages/director/scripts/stance-sim.ts",
     "daily:test": "node packages/director/scripts/daily-test.ts",
+    "legends:test": "node packages/director/scripts/legends-test.ts",
     "llm:smoke": "node packages/director/scripts/llm-smoke.ts",
     "edge:smoke": "node packages/director/scripts/edge-smoke.ts",
     "bibles": "node packages/director/scripts/bibles.ts"

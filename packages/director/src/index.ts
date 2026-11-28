@@ -15,5 +15,6 @@ export * from './dialogue.ts';
 export * from './memory.ts';
 export * from './dilemmas.ts';
 export * from './daily.ts';
+export * from './legends.ts';
 export * from './proxy.ts';
 export * from './runtime.ts';
