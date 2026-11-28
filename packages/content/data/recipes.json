@@ -1,0 +1,88 @@
+{
+  "cooked_meat": {
+    "id": "cooked_meat",
+    "output": {
+      "item": "cooked_meat",
+      "qty": 1
+    },
+    "inputs": [
+      {
+        "item": "raw_meat",
+        "qty": 1
+      }
+    ],
+    "station": "fire",
+    "ticks": 2
+  },
+  "arrow": {
+    "id": "arrow",
+    "output": {
+      "item": "arrow",
+      "qty": 4
+    },
+    "inputs": [
+      {
+        "item": "wood",
+        "qty": 1
+      },
+      {
+        "item": "stone",
+        "qty": 1
+      }
+    ],
+    "station": "workshop",
+    "ticks": 2
+  },
+  "fur_cloak": {
+    "id": "fur_cloak",
+    "output": {
+      "item": "fur_cloak",
+      "qty": 1
+    },
+    "inputs": [
+      {
+        "item": "hide",
+        "qty": 4
+      }
+    ],
+    "station": "workshop",
+    "ticks": 6
+  },
+  "axe": {
+    "id": "axe",
+    "output": {
+      "item": "axe",
+      "qty": 1
+    },
+    "inputs": [
+      {
+        "item": "wood",
+        "qty": 2
+      },
+      {
+        "item": "stone",
+        "qty": 2
+      }
+    ],
+    "ticks": 3
+  },
+  "sword": {
+    "id": "sword",
+    "output": {
+      "item": "sword",
+      "qty": 1
+    },
+    "inputs": [
+      {
+        "item": "iron_ore",
+        "qty": 3
+      },
+      {
+        "item": "wood",
+        "qty": 1
+      }
+    ],
+    "station": "workshop",
+    "ticks": 8
+  }
+}
