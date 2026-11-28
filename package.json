@@ -16,6 +16,7 @@
     "build:edge": "node packages/director/scripts/build-edge.ts",
     "director:sim": "node packages/director/scripts/sim.ts",
     "cost": "node packages/director/scripts/cost.ts",
+    "dialogue:eval": "node packages/director/scripts/dialogue-eval.ts",
     "llm:smoke": "node packages/director/scripts/llm-smoke.ts",
     "edge:smoke": "node packages/director/scripts/edge-smoke.ts",
     "bibles": "node packages/director/scripts/bibles.ts"
