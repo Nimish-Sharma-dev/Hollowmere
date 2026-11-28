@@ -21,6 +21,7 @@
     "stance:sim": "node packages/director/scripts/stance-sim.ts",
     "daily:test": "node packages/director/scripts/daily-test.ts",
     "legends:test": "node packages/director/scripts/legends-test.ts",
+    "chronicle:test": "node packages/director/scripts/chronicle-test.ts",
     "llm:smoke": "node packages/director/scripts/llm-smoke.ts",
     "edge:smoke": "node packages/director/scripts/edge-smoke.ts",
     "bibles": "node packages/director/scripts/bibles.ts"
