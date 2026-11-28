@@ -19,3 +19,4 @@ export * from './legends.ts';
 export * from './chronicle.ts';
 export * from './proxy.ts';
 export * from './runtime.ts';
+export * from './endings.ts';
