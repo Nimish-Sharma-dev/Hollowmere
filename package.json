@@ -11,7 +11,14 @@
     "test": "node --test \"packages/**/test/**/*.test.ts\"",
     "sim": "node packages/engine/scripts/sim.ts",
     "verify": "npm run typecheck && npm run test",
-    "content:lint": "node packages/content/scripts/lint.ts"
+    "content:lint": "node packages/content/scripts/lint.ts",
+    "gen:prompts": "node packages/director/scripts/gen-prompts.ts",
+    "build:edge": "node packages/director/scripts/build-edge.ts",
+    "director:sim": "node packages/director/scripts/sim.ts",
+    "cost": "node packages/director/scripts/cost.ts",
+    "llm:smoke": "node packages/director/scripts/llm-smoke.ts",
+    "edge:smoke": "node packages/director/scripts/edge-smoke.ts",
+    "bibles": "node packages/director/scripts/bibles.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
