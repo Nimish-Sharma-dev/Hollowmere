@@ -1,0 +1,85 @@
+[
+  {
+    "id": "hope_high",
+    "conditions": [
+      {
+        "stat": "hope",
+        "op": ">=",
+        "value": 8
+      }
+    ],
+    "event": "festival",
+    "cooldownDays": 5
+  },
+  {
+    "id": "fear_high",
+    "conditions": [
+      {
+        "stat": "fear",
+        "op": ">=",
+        "value": 8
+      }
+    ],
+    "event": "riot",
+    "cooldownDays": 5
+  },
+  {
+    "id": "hunger_high",
+    "conditions": [
+      {
+        "stat": "hunger",
+        "op": ">=",
+        "value": 7
+      }
+    ],
+    "event": "famine",
+    "cooldownDays": 6
+  },
+  {
+    "id": "trust_high",
+    "conditions": [
+      {
+        "stat": "trust",
+        "op": ">=",
+        "value": 8
+      }
+    ],
+    "event": "gift_day",
+    "cooldownDays": 5
+  },
+  {
+    "id": "unity_low",
+    "conditions": [
+      {
+        "stat": "unity",
+        "op": "<=",
+        "value": 2
+      }
+    ],
+    "event": "factions_split",
+    "cooldownDays": 5
+  },
+  {
+    "id": "everything_low",
+    "conditions": [
+      {
+        "stat": "hope",
+        "op": "<=",
+        "value": 2
+      },
+      {
+        "stat": "trust",
+        "op": "<=",
+        "value": 2
+      },
+      {
+        "stat": "unity",
+        "op": "<=",
+        "value": 2
+      }
+    ],
+    "event": "exodus",
+    "cooldownDays": 99,
+    "once": true
+  }
+]

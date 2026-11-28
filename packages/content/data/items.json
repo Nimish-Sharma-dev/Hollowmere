@@ -1,0 +1,136 @@
+{
+  "wood": {
+    "id": "wood",
+    "name": "Wood",
+    "kind": "resource",
+    "stack": 20
+  },
+  "stone": {
+    "id": "stone",
+    "name": "Stone",
+    "kind": "resource",
+    "stack": 20
+  },
+  "iron_ore": {
+    "id": "iron_ore",
+    "name": "Iron Ore",
+    "kind": "resource",
+    "stack": 20
+  },
+  "hide": {
+    "id": "hide",
+    "name": "Hide",
+    "kind": "resource",
+    "stack": 10
+  },
+  "arrow": {
+    "id": "arrow",
+    "name": "Arrow",
+    "kind": "resource",
+    "stack": 30
+  },
+  "berries": {
+    "id": "berries",
+    "name": "Berries",
+    "kind": "food",
+    "stack": 20,
+    "food": {
+      "hunger": 8
+    }
+  },
+  "raw_meat": {
+    "id": "raw_meat",
+    "name": "Raw Meat",
+    "kind": "resource",
+    "stack": 10
+  },
+  "cooked_meat": {
+    "id": "cooked_meat",
+    "name": "Cooked Meat",
+    "kind": "food",
+    "stack": 10,
+    "food": {
+      "hunger": 28,
+      "health": 2
+    }
+  },
+  "bread": {
+    "id": "bread",
+    "name": "Bread",
+    "kind": "food",
+    "stack": 10,
+    "food": {
+      "hunger": 22
+    }
+  },
+  "bandage": {
+    "id": "bandage",
+    "name": "Bandage",
+    "kind": "remedy",
+    "stack": 5,
+    "remedy": {
+      "heal": 25
+    }
+  },
+  "axe": {
+    "id": "axe",
+    "name": "Axe",
+    "kind": "tool",
+    "stack": 1,
+    "tool": {
+      "type": "axe",
+      "power": 2
+    }
+  },
+  "pickaxe": {
+    "id": "pickaxe",
+    "name": "Pickaxe",
+    "kind": "tool",
+    "stack": 1,
+    "tool": {
+      "type": "pickaxe",
+      "power": 1
+    }
+  },
+  "sword": {
+    "id": "sword",
+    "name": "Sword",
+    "kind": "weapon",
+    "stack": 1,
+    "weapon": {
+      "damage": 14,
+      "range": 1.6,
+      "cooldown": 8,
+      "knockback": 0.6
+    }
+  },
+  "bow": {
+    "id": "bow",
+    "name": "Bow",
+    "kind": "weapon",
+    "stack": 1,
+    "weapon": {
+      "damage": 9,
+      "range": 7,
+      "cooldown": 14,
+      "knockback": 0.2,
+      "ranged": {
+        "ammo": "arrow"
+      }
+    }
+  },
+  "wool_coat": {
+    "id": "wool_coat",
+    "name": "Wool Coat",
+    "kind": "clothing",
+    "stack": 1,
+    "warmth": 5
+  },
+  "fur_cloak": {
+    "id": "fur_cloak",
+    "name": "Fur Cloak",
+    "kind": "clothing",
+    "stack": 1,
+    "warmth": 8
+  }
+}

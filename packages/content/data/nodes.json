@@ -1,0 +1,58 @@
+{
+  "oak_tree": {
+    "id": "oak_tree",
+    "name": "Oak Tree",
+    "yields": [
+      {
+        "item": "wood",
+        "min": 2,
+        "max": 4
+      }
+    ],
+    "tool": "axe",
+    "uses": 3,
+    "respawnDays": 2
+  },
+  "berry_bush": {
+    "id": "berry_bush",
+    "name": "Berry Bush",
+    "yields": [
+      {
+        "item": "berries",
+        "min": 2,
+        "max": 4
+      }
+    ],
+    "uses": 4,
+    "respawnDays": 1,
+    "energyCost": 1
+  },
+  "stone_outcrop": {
+    "id": "stone_outcrop",
+    "name": "Stone Outcrop",
+    "yields": [
+      {
+        "item": "stone",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    "tool": "pickaxe",
+    "uses": 5,
+    "respawnDays": 3
+  },
+  "iron_vein": {
+    "id": "iron_vein",
+    "name": "Iron Vein",
+    "yields": [
+      {
+        "item": "iron_ore",
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "tool": "pickaxe",
+    "uses": 2,
+    "respawnDays": 4
+  }
+}
